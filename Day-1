@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"></div>
+    <!-- <h1>I am Sai <br> Gopi</h1>
+    <h1>I am Ravi</h1> -->
+    <script type="text/babel">
+        //const element= <h1 className="a">Hello JSX!</h1>
+        //const root=ReactDOM.createRoot(document.getElementById("name"))
+        //root.render(element)
+
+        //const elements= React.createElement('h1',{className:'a'},'hello jsx')
+        //const root=ReactDOM.createRoot(document.getElementById("name"))
+        //root.render(element)
+
+        //const n=10;
+        //const m=<h1>React is {n*2} times better than jsx</h1>
+        //const r=ReactDOM.createRoot(document.getElementById('a'))
+        //r.render(m)
+
+        function getGreeting(name){
+            return `Hello ,${name}! Welcome to React`
+        }
+        //component that uses the function in jsx
+        function Greeting(){
+            const name="Sai"      ///
+            return <h1>{getGreeting(name)}</h1>
+        }
+        const root=ReactDOM.createRoot(document.getElementById('a'))
+        root.render(</Greeting>)
+    </script>
+</body>
+</html>
+
+
+****a.js******
+
+const b=React.createElement(
+    'h1', {id:'a'} , 'I am Sai charan'
+)
+
+const element=document.getElementById('root')
+const root=ReactDOM.render(b,element)
+root.render(b)
+
+
+
+NOTES:
+
+ReactJS Introduction:
+->React is a Javascript library for createing user interface.
+->[library: predefined code]
+
+-->It's commonly used to build single-page applications, where the content updates dynamically without requiring a full page reload.
+
+
+Create Element:
+->React.createElement(type,prop)
+-type : 
+ReactDOM.createRoot()
+-->Reactelement-what to render
+Container = where to render
+
+
+Intro to JSX:
+->(JavaScript XML) is a syntax extension for Javascript in react js, it allows us to write HTML in react.
+->make sus easier to write HTML in react.
+->JSX : JSX code gets compiled into JS.
+Babel : a tool converts translates into JS.
+Keypoints: 
+</br>
+</img>
+class =className()
+
+
+Expressions in JSX:
+->With jsx, you can write expression in {}
+
+using a function call:
+you cancall the function call directly within the jsx expressions.
