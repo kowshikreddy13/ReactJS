@@ -1,0 +1,81 @@
+Public/index.html: The main html file that servers as the entry point for the application.
+scr/index.js : The javascript entry point for the react app where the DOM is rendered.
+scr/App.js : The main component that servers as the root of the component tree.
+scr/components : A folder to store reusable components.
+
+1)Components:(core building blocks of a react application)
+->The help to create reusable block of code.
+->If any thing goes wrong in UI, it is very easy to findout and solve that
+
+
+1)Class components
+2)Function components
+
+
+********App.js*****
+import React from "react";
+
+import './App.css' ;
+import Welcome from './Welcome';
+
+// const Welcome=()=><h1 className="message">Hello SAI</h1>
+
+// function App() {
+//   return(
+//     <div className="App">
+//       <Welcome/>
+//     </div>
+//   )
+// }
+
+
+const App=()=>{
+  return(
+    <div className="App">
+      <Welcome name="Rahul" greeting="Good Morning "/>
+      <Welcome name="Sai" greeting="Good Morning "/>
+    </div>
+  )
+}
+
+export default App;
+
+
+
+*******App.css*******
+/* .message{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  color: blue;
+  background-color: chartreuse;
+  width: 500px;
+  margin-left: 80px;
+  
+} */
+
+
+.greet{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  color: red;
+  background-color: black;
+  width: 500px;
+  margin-left: 80px;
+  
+}
+
+
+*********Welcome.js*********
+import React from "react";
+ const Welcome=(props)=>{
+    const {name, greeting}=props;
+    return(
+        <h1 className="greet">{greeting},{name}</h1>
+    )
+ }
+
+ export default Welcome;
+
+
