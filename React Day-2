@@ -1,0 +1,64 @@
+
+Lists and Keys:
+->In React , alist is a collection of items you want to show on screen
+->Keys : Keys in react helps us to keep the track of items in a list
+->React know which item you have changed ; updated
+
+map():- elements in array function will be applied to all elements
+Ex:
+const numbers = [1, 2, 3, 4, 5];
+const d=numbers.map(num=>num*2)
+console.log(d)
+
+--->map() in react in lists:
+
+
+
+**************************************************************************************************************************
+*******Hello.js************
+
+import React from "react";
+
+function Hello({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1 style={{ color: "red", fontSize: "30px" ,fontFamily: "-moz-initial"}}>Hello, Sai</h1>
+    }else{
+        return <h1>Please Login</h1>
+    }
+};
+export default Hello;
+
+
+****App.js*****
+
+import React from "react";
+//import "./App.css";
+
+// import Hello from "./Hello";
+
+// const App=()=>{
+//   const isLoggedIn = true;
+//   return(
+//       <div className="App">
+//         <Hello isLoggedIn={isLoggedIn}/>
+//       </div>
+//   );
+// };
+//export default App;
+
+
+const CarsList=()=>{
+  const cars=['BMW','Audi','Skoda','TATA','Mahindra'];
+  return(
+    <div>
+      <h1>Car List</h1>
+      <ul>
+        {cars.map((cars, index)=>(
+          <li key={index}>{cars}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+export default CarsList;
