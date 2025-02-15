@@ -1,0 +1,27 @@
+****************useRef*****************
+
+
+import React,{useState,useEffect,useRef} from "react";
+
+function CounterWithPrev(){
+  const [count, setCount] = useState(0);
+  const prevCountRef=useRef();
+//create  ref to store previous value
+
+//useState: tracks the count value
+//useRef stores the previous value in prevCountRef
+  useEffect(()=>{
+    prevCountRef.current = count;
+  },[count])
+  return(
+    <div>
+      <h1>Count the number of clicks</h1>
+      <p>Current Count:{count}</p>
+      <p>prevCount:{prevCountRef.current}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  );
+};
+
+export default CounterWithPrev;
